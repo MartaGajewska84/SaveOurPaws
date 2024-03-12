@@ -28,21 +28,20 @@ export default function Header({ darktheme }: Component) {
           Save Our Paws
         </span>
       </NavbarBrand>
-
-      <div className="flex gap-6 items-center">
-        <NavbarCollapse>
-          <NavbarLink href="#" active>
-            Home
-          </NavbarLink>
-
-          <NavbarLink href="#">Adopt me</NavbarLink>
-          <NavbarLink href="#">Charity shop</NavbarLink>
-          <NavbarLink href="#">Blog</NavbarLink>
-        </NavbarCollapse>
-
+      <div className="flex md:order-2 gap-4">
         <Button gradientDuoTone="cyanToBlue">Sign in</Button>
         <div>{darktheme}</div>
+        <NavbarToggle />
       </div>
+
+      <NavbarCollapse>
+        <NavbarLink href="#" active>
+          Home
+        </NavbarLink>
+        <NavbarLink href="#">Adopt me</NavbarLink>
+        <NavbarLink href="#">Charity shop</NavbarLink>
+        <NavbarLink href="#">Blog</NavbarLink>
+      </NavbarCollapse>
     </Navbar>
   );
 }
