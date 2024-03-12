@@ -1,13 +1,15 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Providers from '@/app/providers';
+import { ThemeModeScript } from 'flowbite-react';
 import Header from './components/Header';
+import FooterComponent from './components/Footer';
+import { DarkThemeToggle, Flowbite } from 'flowbite-react';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Save our pave',
+  title: 'Save our paws',
   description: 'Help us saving animals in need',
 };
 
@@ -18,11 +20,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <ThemeModeScript />
+      </head>
       <body className={inter.className}>
-        <Providers>
-          <Header/>
+        <Flowbite>
+          <Header darktheme={<DarkThemeToggle />} />
           {children}
-          </Providers>
+          <FooterComponent />
+        </Flowbite>
       </body>
     </html>
   );

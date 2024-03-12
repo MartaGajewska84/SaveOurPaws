@@ -1,15 +1,13 @@
-import { Button } from '@nextui-org/react';
+import { Button } from 'flowbite-react';
 
 export default function Home() {
   return (
-    <div className="h-full">
+    <div className="h-screen">
       <div className="flex flex-col items-center">
         <h1 className="pt-56 text-center tracking-widest">Save Our Paws</h1>
         <div className="flex gap-5 pt-10">
-          <Button color="primary" variant="solid">
-            Adopt me
-          </Button>
-          <Button color="primary" variant="light">
+          <Button gradientDuoTone="cyanToBlue">Adopt me</Button>
+          <Button outline gradientDuoTone="cyanToBlue">
             About
           </Button>
         </div>
