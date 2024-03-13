@@ -18,13 +18,13 @@ interface Component {
 export default function Header({ darktheme }: Component) {
   return (
     <Navbar fluid rounded>
-      <NavbarBrand as={Link} href="https://flowbite-react.com">
+      <NavbarBrand as={Link} href="#">
         <Image
           src={logo}
           className="mr-3 h-16 w-16 sm:h-16"
           alt="Save Our Paws Logo"
         />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+        <span className="hidden md:block self-center whitespace-nowrap text-xl font-semibold dark:text-white">
           Save Our Paws
         </span>
       </NavbarBrand>
@@ -36,11 +36,11 @@ export default function Header({ darktheme }: Component) {
 
       <NavbarCollapse>
         <NavbarLink href="#" active>
-          Home
+          Adopt me
         </NavbarLink>
-        <NavbarLink href="#">Adopt me</NavbarLink>
-        <NavbarLink href="#">Charity shop</NavbarLink>
+        <NavbarLink href="#">Charity Shop</NavbarLink>
         <NavbarLink href="#">Blog</NavbarLink>
+        <NavbarLink href="#">Discuss</NavbarLink>
       </NavbarCollapse>
     </Navbar>
   );
