@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Button } from 'flowbite-react';
 import catImage from '../../public/catImage.png';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -27,9 +28,11 @@ export default function Home() {
         </div>
       </div>
       <div className="flex gap-5">
-        <Button gradientDuoTone="cyanToBlue">Adopt me</Button>
+        <Button  gradientDuoTone="cyanToBlue">
+          <Link href="adoptme">Adopt me</Link>
+        </Button>
         <Button outline gradientDuoTone="cyanToBlue">
-          About
+          <Link href="about">About</Link>
         </Button>
       </div>
       <div>

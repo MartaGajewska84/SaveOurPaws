@@ -1,4 +1,5 @@
 import Image from 'next/image';
+
 import { Button } from 'flowbite-react';
 import logo from '../../../public/logo.png';
 
@@ -18,7 +19,7 @@ interface Component {
 export default function Header({ darktheme }: Component) {
   return (
     <Navbar fluid rounded>
-      <NavbarBrand as={Link} href="#">
+      <NavbarBrand as={Link} href="/">
         <Image
           src={logo}
           className="mr-3 h-16 w-16 sm:h-16"
@@ -35,12 +36,12 @@ export default function Header({ darktheme }: Component) {
       </div>
 
       <NavbarCollapse>
-        <NavbarLink href="#" active>
+        <NavbarLink href="adoptme" active>
           Adopt me
         </NavbarLink>
-        <NavbarLink href="#">Charity Shop</NavbarLink>
-        <NavbarLink href="#">Blog</NavbarLink>
-        <NavbarLink href="#">Discuss</NavbarLink>
+        <NavbarLink href="charityshop">Charity Shop</NavbarLink>
+        <NavbarLink href="blog">Blog</NavbarLink>
+        <NavbarLink href="discuss">Discuss</NavbarLink>
       </NavbarCollapse>
     </Navbar>
   );
