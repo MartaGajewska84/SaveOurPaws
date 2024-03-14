@@ -28,7 +28,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex gap-5">
-        <Button  gradientDuoTone="cyanToBlue">
+        <Button gradientDuoTone="cyanToBlue">
           <Link href="adoptme">Adopt me</Link>
         </Button>
         <Button outline gradientDuoTone="cyanToBlue">
